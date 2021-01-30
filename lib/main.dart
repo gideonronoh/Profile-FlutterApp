@@ -16,12 +16,12 @@ class Ninja extends StatelessWidget {
         ),
         //leading: IconButton(Icons.arrow_back),
         title: Text(
-          "My Profile",
+          "Profile",
           style: TextStyle(
             fontWeight: FontWeight.bold,
           ),
         ),
-        centerTitle: true,
+        // centerTitle: true,
         backgroundColor: Colors.grey[900],
       ),
       body: Padding(
@@ -51,41 +51,109 @@ class Ninja extends StatelessWidget {
                 ),
               ),*/
               SizedBox(
-                height: 10.0,
-              ),
-              Text(
-                "Shadrack Lang'at",
-                style: TextStyle(
-                  letterSpacing: 2.0,
-                  color: Colors.lime,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25.0,
-                ),
-              ),
-              SizedBox(height: 30.0),
-              Text(
-                "Profile ID",
-                style: TextStyle(
-                  letterSpacing: 2.0,
-                  color: Colors.grey,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(
-                height: 10.0,
-              ),
-              Text(
-                "H090-78-57",
-                style: TextStyle(
-                    letterSpacing: 2.0,
-                    color: Colors.lime,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 25.0),
-              ),
-              SizedBox(
                 height: 30.0,
               ),
               Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.perm_identity_rounded,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text(
+                    "Name",
+                    style: TextStyle(
+                      letterSpacing: 2.0,
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15.0,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Column(children: <Widget>[
+                Text(
+                  "Shadrack Lang'at",
+                  style: TextStyle(
+                    letterSpacing: 2.0,
+                    color: Colors.amberAccent,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 18,
+                  ),
+                )
+              ]),
+              SizedBox(height: 30.0),
+
+              SizedBox(
+                height: 10.0,
+              ),
+
+              Row(children: <Widget>[
+                Icon(
+                  Icons.announcement_outlined,
+                  color: Colors.grey,
+                ),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Text(
+                  "Status",
+                  style: TextStyle(
+                    // fontSize: 25.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 2.0,
+                    color: Colors.grey,
+                  ),
+                ),
+                SizedBox(
+                  width: 200.0,
+                ),
+              ]),
+              SizedBox(
+                height: 10.0,
+              ),
+              Row(children: <Widget>[
+                Text(
+                  "It's 5 O'Clock Somewhere",
+                  style: TextStyle(
+                    color: Colors.amberAccent,
+                    fontSize: 18.0,
+                  ),
+                ),
+              ]),
+              SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: <Widget>[
+                  Icon(
+                    Icons.call,
+                    color: Colors.grey,
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Column(
+                children: <Widget>[
+                  Text(
+                    "+254710707962",
+                    style: TextStyle(
+                      letterSpacing: 2.0,
+                      color: Colors.amberAccent,
+                      fontSize: 18,
+                    ),
+                  )
+                ],
+              )
+
+              /* Row(,
                 children: <Widget>[
                   Icon(Icons.email, color: Colors.grey),
                   SizedBox(
@@ -99,6 +167,24 @@ class Ninja extends StatelessWidget {
                   )
                 ],
               ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Row(
+                children: <Widget>[],
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Row(
+                children: <Widget>[
+                  Icon(Icons.add_location, color: Colors.grey),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Text("Nyeri", style: TextStyle(color: Colors.lime))
+                ],
+              )*/
             ]),
       ),
     );

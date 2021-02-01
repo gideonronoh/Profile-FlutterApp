@@ -5,7 +5,13 @@ void main() => runApp(MaterialApp(
       home: Ninja(),
     ));
 
-class Ninja extends StatelessWidget {
+class Ninja extends StatefulWidget {
+  @override
+  _NinjaState createState() => _NinjaState();
+}
+
+class _NinjaState extends State<Ninja> {
+  int ninjaLevel = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,6 +29,15 @@ class Ninja extends StatelessWidget {
         ),
         // centerTitle: true,
         backgroundColor: Colors.grey[900],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            ninjaLevel += 1;
+          });
+        },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.grey[800],
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 00.0),
@@ -51,7 +66,7 @@ class Ninja extends StatelessWidget {
                 ),
               ),*/
               SizedBox(
-                height: 30.0,
+                height: 20.0,
               ),
               Row(
                 children: <Widget>[
@@ -149,6 +164,28 @@ class Ninja extends StatelessWidget {
                       color: Colors.amberAccent,
                       fontSize: 18,
                     ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: <Widget>[
+                  Text(
+                    "Current level",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 20.0,
+                  ),
+                  Text(
+                    "$ninjaLevel",
+                    style: TextStyle(color: Colors.amberAccent, fontSize: 18.0),
                   )
                 ],
               )
